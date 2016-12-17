@@ -216,9 +216,23 @@
         </dependency>
   </dependencies>
 	<build>
-		<finalName>ssm</finalName>
+		<finalName>API</finalName>
+
+        <resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
 
 		<plugins>
+
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -237,6 +251,14 @@
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
+			</plugin>
+
+
+
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.3.14.v20161028</version>
 			</plugin>
 		</plugins>
 
