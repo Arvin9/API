@@ -97,6 +97,7 @@
             <value>
             	/hello = anon
                 /index = anon
+                /api/* = anon
                 /book* = anon
                 /resources/** = anon
                 /unauthorized = anon
